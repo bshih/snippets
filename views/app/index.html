@@ -1,3 +1,5 @@
+<import: src="./posts">
+
 <!--
   Derby templates are similar to Handlebars, except that they are first
   parsed as HTML, and there are a few extensions to make them work directly
@@ -15,24 +17,13 @@
 -->
 
 <Title:>
-  {{roomName}} - {_room.visits} visits
+  {_post.title}
 
 <Header:>
-  <!-- This is a component defined in the /ui directory -->
   <ui:connectionAlert>
 
 <Body:>
-  <h1>{_room.welcome}</h1>
-  <p><label>Welcome message: <input value="{_room.welcome}"></label></p>
-
-  <!-- Other templates are referenced like HTML elements -->
-  <p>This page has been visted {_room.visits} times. <app:timer></p>
-
-  <p>Let's go <a href="/{{randomUrl}}">somewhere random</a>.</p>
-
-<timer:>
-  {#if _stopped}
-    <a x-bind="click:start">Start timer</a>
-  {else}
-    You have been here for {_timer} seconds. <a x-bind="click:stop">Stop</a>
-  {/}
+  <h1><label>Title</label><input value="{_post.title}"></h1>
+  <p><label>Author</label><input value="{_post.author}"></p>
+  <p><label>Content</label><textarea>{_post.content}</textarea></p>
+  <p>viewed {_post.views} times</p>
