@@ -22,6 +22,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+# gem 'omniauth'
+# gem 'omniauth-facebook'
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,9 +42,9 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 
-group :test do
+group :development, :test do
   # Don't require rspec-rails, since we don't want to use the built in tasks.
-  gem 'rspec-rails', "~> 2.9.0", :require => false
+  gem 'rspec-rails', "~> 2.11.0", :require => false
   gem 'capybara',    "~> 1.1",   :require => false
   gem 'fabrication', "~> 1.2",   :require => false
 
