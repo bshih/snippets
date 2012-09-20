@@ -45,8 +45,9 @@ gem 'jquery-rails'
 group :development, :test do
   # Don't require rspec-rails, since we don't want to use the built in tasks.
   gem 'rspec-rails', "~> 2.11.0"
-  gem 'capybara',    "~> 1.1",   :require => false
+  gem 'capybara',    "~> 1.1"
   gem 'fabrication', "~> 1.2",   :require => false
+  # should use guard for automated tests
 
   # 0.7.2 is missing 1f3a68f, unclear why
   gem 'database_cleaner', :git => 'https://github.com/bmabey/database_cleaner.git'
