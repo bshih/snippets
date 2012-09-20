@@ -44,7 +44,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   # Don't require rspec-rails, since we don't want to use the built in tasks.
-  gem 'rspec-rails', "~> 2.11.0", :require => false
+  gem 'rspec-rails', "~> 2.11.0"
   gem 'capybara',    "~> 1.1",   :require => false
   gem 'fabrication', "~> 1.2",   :require => false
 
