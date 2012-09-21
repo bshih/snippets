@@ -41,11 +41,18 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl', '1.0.3'
+end
+
 
 group :development, :test do
   # Don't require rspec-rails, since we don't want to use the built in tasks.
   gem 'rspec-rails', "~> 2.11.0"
-  gem 'capybara',    "~> 1.1"
+  gem 'guard-rspec', "0.5.5"
+  # gem 'capybara',    "~> 1.1"
   gem 'fabrication', "~> 1.2",   :require => false
   # should use guard for automated tests
 
