@@ -7,6 +7,8 @@ gem 'bootstrap-sass', '2.0.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem "pg", :group => :production
+
 
 group :development do
   gem 'sqlite3'
@@ -71,8 +73,4 @@ group :development, :test do
     gem 'simplecov'
     gem 'fdoc'
   end
-end
-
-group :production do
-  gem 'pg'
 end
