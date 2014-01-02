@@ -2,16 +2,17 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 gem 'strong_parameters'
-# gem 'bootstrap-sass', '2.0.4'
+gem 'bootstrap-sass', '2.0.4'
+gem 'bcrypt-ruby', '3.0.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'pg', :group => :production
+
 group :development do
   gem 'sqlite3'
 end
-
-gem 'pg', :group => :production
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -51,6 +52,7 @@ group :test do
   gem 'growl', '1.0.3'
 end
 
+gem 'annotate', '2.5.0', group: :development
 
 group :development, :test do
   # Don't require rspec-rails, since we don't want to use the built in tasks.
